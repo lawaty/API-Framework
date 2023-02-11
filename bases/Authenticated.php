@@ -61,7 +61,7 @@ abstract class Authenticated extends Endpoint
 
   public static function getToken(User $user) {
     return self::encode([
-      'id' => $user->getID()
+      'id' => $user->get('id')
     ]);
   }
 

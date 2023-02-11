@@ -18,3 +18,115 @@ Delete {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpe
 
 GetSessions {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 12:59 2023-02-11 12:59 ::1 1
 
+GetSessions {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:01 2023-02-11 13:01 ::1 1
+
+GetSessions {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:01 2023-02-11 13:01 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:02 2023-02-11 13:02 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:10 2023-02-11 13:10 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:10 2023-02-11 13:10 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:10 2023-02-11 13:10 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:12 2023-02-11 13:12 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:13 2023-02-11 13:13 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:13 2023-02-11 13:13 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:13 2023-02-11 13:13 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:15 2023-02-11 13:15 ::1 1
+
+GetSessions {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 500 "SQLSTATE[HY000]: General error: 1 near \"as\": syntax error" 2023-02-11 13:20 2023-02-11 13:20 ::1 1
+
+GetSessions {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 500 "SQLSTATE[HY000]: General error: 1 no such column: project.color" 2023-02-11 13:20 2023-02-11 13:20 ::1 1
+
+GetSessions {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:20 2023-02-11 13:20 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:21 2023-02-11 13:21 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:21 2023-02-11 13:21 ::1 1
+
+GetSessions {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:21 2023-02-11 13:21 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:22 2023-02-11 13:22 ::1 1
+
+GetSessions {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:22 2023-02-11 13:22 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:22 2023-02-11 13:22 ::1 1
+
+GetSessions {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:22 2023-02-11 13:22 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:23 2023-02-11 13:23 ::1 1
+
+GetSessions {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:23 2023-02-11 13:23 ::1 1
+
+GetSessions {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:24 2023-02-11 13:24 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:24 2023-02-11 13:24 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:24 2023-02-11 13:24 ::1 1
+
+GetSessions {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:24 2023-02-11 13:24 ::1 1
+
+GetSessions {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:25 2023-02-11 13:25 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 13:25 2023-02-11 13:25 ::1 1
+
+Login {"username":"lawaty","password":"lawaty10"} 200 success 2023-02-11 13:26 2023-02-11 13:26 ::1 0
+
+GetSessions {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 17:18 2023-02-11 17:18 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 17:18 2023-02-11 17:18 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 17:19 2023-02-11 17:19 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 17:21 2023-02-11 17:21 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 17:21 2023-02-11 17:21 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 17:26 2023-02-11 17:26 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 17:26 2023-02-11 17:26 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 17:26 2023-02-11 17:26 ::1 1
+
+Login {"username":"lawaty","password":"lawat10"} 401 "Wrong username or password" 2023-02-11 17:31 2023-02-11 17:31 ::1 0
+
+Login {"username":"lawaty","password":"lawaty10"} 200 success 2023-02-11 17:31 2023-02-11 17:31 ::1 0
+
+GetProjects {"token":"undefined"} 400 "Invalid Parameter: token" 2023-02-11 17:31 2023-02-11 17:31 ::1 0
+
+GetSessions {"token":"undefined"} 400 "Invalid Parameter: token" 2023-02-11 17:31 2023-02-11 17:31 ::1 0
+
+Login {"username":"lawaty","password":"lawaty10"} 200 success 2023-02-11 17:31 2023-02-11 17:31 ::1 0
+
+GetProjects {"token":"undefined"} 400 "Invalid Parameter: token" 2023-02-11 17:31 2023-02-11 17:31 ::1 0
+
+GetSessions {"token":"undefined"} 400 "Invalid Parameter: token" 2023-02-11 17:31 2023-02-11 17:31 ::1 0
+
+Login [] 400 "Invalid Parameter: parameter 'username' is not found" 2023-02-11 17:32 2023-02-11 17:32 ::1 0
+
+GetSessions {"token":"undefined"} 400 "Invalid Parameter: token" 2023-02-11 18:04 2023-02-11 18:04 ::1 0
+
+GetProjects {"token":"undefined"} 400 "Invalid Parameter: token" 2023-02-11 18:04 2023-02-11 18:04 ::1 0
+
+GetProjects {"token":"undefined"} 400 "Invalid Parameter: token" 2023-02-11 18:24 2023-02-11 18:24 ::1 0
+
+GetSessions {"token":"undefined"} 400 "Invalid Parameter: token" 2023-02-11 18:24 2023-02-11 18:24 ::1 0
+
+Login {"username":"lawaty","password":"lawaty10"} 200 success 2023-02-11 18:25 2023-02-11 18:25 ::1 0
+
+GetProjects {"token":"undefined"} 400 "Invalid Parameter: token" 2023-02-11 18:26 2023-02-11 18:26 ::1 0
+
+GetSessions {"token":"undefined"} 400 "Invalid Parameter: token" 2023-02-11 18:26 2023-02-11 18:26 ::1 0
+
+Login {"username":"lawaty","password":"lawaty10"} 200 success 2023-02-11 18:26 2023-02-11 18:26 ::1 0
+
+GetSessions {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 18:26 2023-02-11 18:26 ::1 1
+
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 18:26 2023-02-11 18:26 ::1 1
+

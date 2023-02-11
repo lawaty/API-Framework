@@ -9,7 +9,7 @@ class SessionMapper extends Mapper
   public static function getAllByUser(User $user, array $filters = []): array
   {
     return DB::getDB()->select(
-      'sessions.*, projects.name as project_name',
+      'sessions.*, projects.name as project_name, projects.color as project_color',
       'users join projects join sessions on users.id = projects.user_id and projects.id = sessions.project_id',
       ['users.id' => $user->get('id'), ...$filters]
     );

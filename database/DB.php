@@ -33,7 +33,7 @@ class DB
 		return self::$instance;
 	}
 
-	private static function joinToString($array, $conjunction, $relation)
+	private static function joinToString(array $array, string $conjunction, string $relation)
 	{
 
 		#TODO: Allow injecting string portions to the resulted query
@@ -85,7 +85,7 @@ class DB
 		return $result;
 	}
 
-	private static function extractParams($array)
+	private static function extractParams(array $array)
 	{
 		$result = array();
 		foreach ($array as $key => $value) {

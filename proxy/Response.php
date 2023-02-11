@@ -54,10 +54,11 @@ class Response
 
   public function echo(): void
   {
-    // header('Content-type: text/plain', true);
-    // header('Connection: close');
-    // ignore_user_abort(true);
-    // ob_start();
+    header('Content-type: text/plain', true);
+    header('Connection: close');
+    ignore_user_abort(true);
+    ob_end_clean();
+    ob_start();
 
     $body = '';
     if (is_iterable($this->body))
@@ -71,11 +72,11 @@ class Response
     echo $body;
     http_response_code($this->code);
 
-    // // Closing Connection
-    // header('Content-Length: ' . ob_get_length());
-    // while (ob_get_level() > 0)
-    //   ob_end_flush();
+    // Closing Connection
+    header('Content-Length: ' . ob_get_length());
+    while (ob_get_level() > 0)
+      ob_end_flush();
 
-    // flush();
+    flush();
   }
 }
