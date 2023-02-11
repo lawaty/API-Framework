@@ -1,11 +1,12 @@
 <?php
 
+/**
+ * @property string $table
+ * @property array $record_info
+ * @property string $entity_type
+ */
 abstract class Mapper implements IMapper
 {
-  protected static string $table; // tablename
-  protected static string $entity_type; // mapper classname
-  protected static array $record_info;
-
   protected IEntity $entity; // entity instance
 
   public static function getTableName(): string

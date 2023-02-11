@@ -1,10 +1,10 @@
 <?php
 
+/**
+ * @property string $mapper_type
+ */
 abstract class Entity implements IEntity
 {
-  // To be overriden
-  protected static string $mapper_type; // mapper classname
-
   protected ?IMapper $mapper = null; // mapper instance
   protected bool $synced = true; // db synchronization flag
 
