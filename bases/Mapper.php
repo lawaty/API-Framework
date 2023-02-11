@@ -4,6 +4,7 @@ abstract class Mapper implements IMapper
 {
   protected static string $table; // tablename
   protected static string $entity_type; // mapper classname
+  protected static array $record_info;
 
   protected IEntity $entity; // entity instance
 
@@ -17,9 +18,8 @@ abstract class Mapper implements IMapper
     /**
      * Function makes the data ready for insertion
      */
-    $record_info = static::$entity_type::$info;
     $healthy = [];
-    foreach($record_info as $property){
+    foreach(static::$record_info as $property){
       if(!isset($data[$property]))
         continue;
 
@@ -30,6 +30,11 @@ abstract class Mapper implements IMapper
     }
       
     return $healthy;
+  }
+
+  public function __construct(IEntity $entity)
+  {
+    $this->entity = $entity;
   }
 
   public static function create(array $entity_data): ?IEntity
@@ -63,7 +68,9 @@ abstract class Mapper implements IMapper
     if(!$id = $this->entity->getID())
       throw new IncompleteEntity(static::$entity_type);
 
-    $info = static::sanitize($this->entity->getInfo());
+    $info = [];
+    foreach(static::$record_info as $info)
+      $info[$info] = $this->entity->get($info);
 
     if($result = $db->update(static::$table, $info, $id))
       $this->entity->setSync(true);
@@ -107,10 +114,8 @@ abstract class Mapper implements IMapper
 
   public static function validateFilters(array $filters)
   {
-    $record_info = static::$entity_type::$info;
-
     foreach($filters as $key => $value)
-      if(!in_array($key, $record_info) && !is_numeric($key) && $key != 'id')
+      if(!in_array($key, static::$record_info) && !is_numeric($key) && $key != 'id')
         throw new InvalidArguments("Invalid Filter Key $key for entity of type ".static::$entity_type);
   }
 

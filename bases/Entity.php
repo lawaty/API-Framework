@@ -4,7 +4,6 @@ abstract class Entity implements IEntity
 {
   // To be overriden
   protected static string $mapper_type; // mapper classname
-  protected static array $info; // entity info
 
   protected ?IMapper $mapper = null; // mapper instance
   protected bool $synced = true; // db synchronization flag
@@ -21,10 +20,13 @@ abstract class Entity implements IEntity
     if (get_class($entity) != static::class)
       throw new IncompatibleEntities(static::class, get_class($entity));
 
-    $this->load($entity->getInfo());
+    $fields = get_object_vars($this);
+    foreach($fields as $field => $value)
+      $this->{$field} = $entity->get($field);
+    
   }
 
-  protected function __construct($id)
+  public function __construct($id)
   {
     $this->setID($id);
     $this->inSync();
@@ -37,42 +39,16 @@ abstract class Entity implements IEntity
      * @param array data to be loaded including required and optional info
      */
 
-    // Required
-    foreach (static::$info as $property) {
-      if (!isset($data[$property])) {
-        if (!isset($this->{$property})) // required and not found
-          throw new RequiredPropertyNotFound($property, static::class);
-        else // not required and not found
-          continue;
-      }
-
-      $this->set($property, $data[$property]);
-      unset($data[$property]);
-    }
-
-    // Optional
     foreach ($data as $property => $value)
       if (property_exists($this, $property))
         $this->set($property, $value);
   }
 
-  public function getInfo(): array
-  {
-    $result = [];
-    foreach (static::$info as $property)
-      $result[$property] = $this->{$property};
-
-    return $result;
-  }
-
-  public function getID()
+  public function getID(): array
   {
     /**
      * Function returns the entity id
      */
-    if(count($this->ids) == 1)
-      return $this->ids['id'];
-
     return $this->ids;
   }
 
@@ -130,7 +106,7 @@ abstract class Entity implements IEntity
       $value = json_decode($value, true);
 
     if (!isset($this->{$property}) || $this->{$property} != $value) {
-      @$this->{$property} = $value;
+      $this->{$property} = $value;
       $this->setSync(false);
     }
   }

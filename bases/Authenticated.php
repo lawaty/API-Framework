@@ -1,5 +1,8 @@
 <?php
 
+use Firebase\JWT\JWT;
+use Firebase\JWT\Key;
+
 abstract class Authenticated extends Endpoint
 {
   /**
@@ -26,7 +29,7 @@ abstract class Authenticated extends Endpoint
     if ($response = parent::prehandle())
       return $response;
 
-    if ($user = Authenticator::auth($this->request['token']))
+    if ($user = self::auth($this->request['token']))
       $this->user = $user;
 
     if (!$this->user)
@@ -36,7 +39,7 @@ abstract class Authenticated extends Endpoint
     return null;
   }
 
-  public function getUser()
+  public function getUser(): ?User
   {
     /**
      * Returns the request sender's ID
@@ -46,5 +49,34 @@ abstract class Authenticated extends Endpoint
       return $this->user;
       
     return null;
+  }
+
+  public static function auth(string $sent_token)
+  {
+    if ($data = self::decode($sent_token))
+      return new User($data->id);
+
+    else return false;
+  }
+
+  public static function getToken(User $user) {
+    return self::encode([
+      'id' => $user->getID()
+    ]);
+  }
+
+  public static function encode($data)
+  {
+    return JWT::encode($data, SECRET, 'HS256');
+  }
+
+  public static function decode(string $cypher)
+  {
+    try {
+      return JWT::decode($cypher, new Key(SECRET, 'HS256'), ['decodeAsArray' => true]);
+    }
+    catch (DomainException $e){
+      return false;
+    }
   }
 }

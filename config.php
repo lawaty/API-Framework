@@ -10,7 +10,7 @@ const LOG = LOCAL."/logs";
 const DEBUG = false;
 
 // Sqlite DB
-define("DB_PATH", "./mydb.db");
+define("DB_PATH", "database/db.db");
 
 const DEPENDENCIES = [
   // Global
@@ -30,14 +30,12 @@ const DEPENDENCIES = [
   'AssocEntities' => 'helpers',
 
   // Bases and Interfaces
-  'Authenticated' => 'endpoints/bases',
-  'Model' => 'models',
-  'Mapper' => 'mappers',
-  'JoinMapper' => 'mappers',
-  'IModel' => 'models',
-  'IMapper' => 'mappers',
-
-  'Submission' => 'models/exams',
+  'Authenticated' => 'bases',
+  'Entity' => 'bases',
+  'Mapper' => 'bases',
+  'JoinMapper' => 'bases',
+  'IEntity' => 'bases',
+  'IMapper' => 'bases',
 
   // Exceptions
   'NegativeSectionReached' => 'exceptions',
@@ -52,15 +50,26 @@ const DEPENDENCIES = [
   'Conflict' => 'exceptions',
   'Fail' => 'exceptions',
 
-  'PropertyNotExisting' => 'models/exceptions',
-  'RequiredPropertyNotFound' => 'models/exceptions',
-  'IncompleteModel' => 'models/exceptions',
-  'InvalidID' => 'models/exceptions',
-  'IncompatibleModels' => 'models/exceptions',
+  'PropertyNotExisting' => 'exceptions',
+  'RequiredPropertyNotFound' => 'exceptions',
+  'IncompleteModel' => 'exceptions',
+  'InvalidID' => 'exceptions',
+  'IncompatibleModels' => 'exceptions',
 
-  'UniquenessViolated' => 'database/exceptions',
-  'ForeignKeyViolated' => 'database/exceptions',
-];
+  'UniquenessViolated' => 'exceptions',
+  'ForeignKeyViolated' => 'exceptions',
+
+
+
+
+
+  // Entities
+  'User' => 'entities',
+  'UserMapper' => 'mappers',
+  'Project' => 'entities',
+  'ProjectMapper' => 'mappers',
+  'Session' => 'entities',
+  'SessionMapper' => 'mappers',];
 
 // JWT Secret
 const SECRET = 'lol';

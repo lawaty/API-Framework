@@ -1,0 +1,20 @@
+GetProjects {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 12:42 2023-02-11 12:42 ::1 1
+
+Delete {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc","project_id":"20"} 404 "Project Not Found" 2023-02-11 12:45 2023-02-11 12:45 ::1 1
+
+Delete {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc","project_id":"8"} 204 success 2023-02-11 12:45 2023-02-11 12:45 ::1 1
+
+Delete {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc","project_id":"8"} 404 "Project Not Found" 2023-02-11 12:45 2023-02-11 12:45 ::1 1
+
+GetSessions {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 12:49 2023-02-11 12:49 ::1 1
+
+GetSessions {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 12:50 2023-02-11 12:50 ::1 1
+
+Delete {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc","session_id":"1000"} 404 "Session Not Found" 2023-02-11 12:58 2023-02-11 12:58 ::1 1
+
+Delete {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc","session_id":"2"} 204 success 2023-02-11 12:59 2023-02-11 12:59 ::1 1
+
+Delete {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc","session_id":"2"} 404 "Session Not Found" 2023-02-11 12:59 2023-02-11 12:59 ::1 1
+
+GetSessions {"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MX0.4hZkYAXrV6LTpeAAYb1vNszEAEopbqThZcFNllKZJoc"} 200 success 2023-02-11 12:59 2023-02-11 12:59 ::1 1
+

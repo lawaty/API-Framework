@@ -16,7 +16,6 @@ interface IEntity
    */
   public function get(string $property);
   public function set(string $property, $value): void;
-  public function getInfo(): array; // returns special array of entity attributes specified as static property
 
   /**
    * Method used to load object properties from database

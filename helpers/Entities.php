@@ -88,4 +88,9 @@ class Entities implements Iterator, JsonSerializable, ArrayAccess
   {
     return count($this->array);
   }
+
+  public function toArray(): array
+  {
+    return $this->array;
+  }
 }

@@ -98,11 +98,6 @@ class Validator
 		return $this->required;
 	}
 
-	public function formatError(): string
-	{
-		return $this->invalid;
-	}
-
 	public function formatValidationTree(int $indentation = 0): string
 	{
 		$result = "";

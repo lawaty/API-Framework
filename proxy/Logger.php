@@ -26,17 +26,17 @@ class Logger
     if ($endpoint) {
       $endpoint_name = get_class($endpoint);
       $user = $endpoint->getUser();
-      $user_id = $user->get('id');
-      $type = get_class($user);
+      if($user)
+        $user_id = $user->get('id');
+      else $user_id = 0;
     } else {
       $endpoint_name = "Not Found";
       $user_id = 0;
-      $type = "none";
     }
 
     fwrite(
       $fhand,
-      $endpoint_name . " " . json_encode($_REQUEST) . " " . $response->getCode() . " " . $response_body . " " . $this->start_inst->toString() . " " . (new Ndate())->toString() . " " . $_SERVER['REMOTE_ADDR'] . " " . $user_id . " " . $type . "\n\n"
+      $endpoint_name . " " . json_encode($_REQUEST) . " " . $response->getCode() . " " . $response_body . " " . $this->start_inst->toString() . " " . (new Ndate())->toString() . " " . $_SERVER['REMOTE_ADDR'] . " " . $user_id . "\n\n"
     );
 
     fclose($fhand);

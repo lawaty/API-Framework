@@ -48,12 +48,12 @@ abstract class Endpoint
   {
   }
 
-  public function getClientId(): int
+  public function getUser(): ?User
   {
     /**
      * Returns the request sender's ID
      * Overridden in Authenticated Base Class
      */
-    return 0;
+    return null;
   }
 }
