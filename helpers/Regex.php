@@ -12,6 +12,7 @@ class Regex
   const MONTH = '/^([1-9]|1[0-2])$/u';
   const DATE = '/^(\d{4})-(\d{2})-(\d{2})$/u';
   const TIME = '/^[0-9]{2}:[0-9]{2}$/u';
+  const TIME_SEC = '/^[0-9]{2}:[0-9]{2}:[0-9]{2}$/u';
   const DATE_TIME = '/^(\d{4})-(\d{2})-(\d{2}) [0-9]{2}:[0-9]{2}$/u';
   const DATE_TIME_SEC = '/^(\d{4})-(\d{2})-(\d{2}) [0-9]{2}:[0-9]{2}:[0-9]{2}$/u';
   const DAY_TIME = '/^(Sun|Mon|Tue|Wed|Thu|Fri|Sat) [0-9]{2}:[0-9]{2}$/u';
@@ -32,6 +33,7 @@ class Regex
   const NAME = '/^[\p{Arabic}\w\-. ]{1,60}$/u';
   const PHONE = '/^[0-9\+]{5,17}$/u';
   const GRADE = '/^([1-9]|1[0-2])$/u';
+  const HEX = '/^#([a-f0-9]{3}){1,2}\b$/i';
 
   // general
   const GENERIC = '[\p{Arabic}\w\-\)\(.,\s+]';

@@ -50,7 +50,7 @@ class Ndate extends DateTime
     return $this->format(self::DATE);
   }
 
-  public function toString(): string
+  public function toString($format = self::DATE_TIME): string
   {
     return $this->format(self::DATE_TIME);
   }

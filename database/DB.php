@@ -33,7 +33,7 @@ class DB
 		return self::$instance;
 	}
 
-	private static function joinToString($array, $conjunction, $relation)
+	private static function joinToString(array $array, string $conjunction, string $relation)
 	{
 
 		#TODO: Allow injecting string portions to the resulted query
@@ -85,7 +85,7 @@ class DB
 		return $result;
 	}
 
-	private static function extractParams($array)
+	private static function extractParams(array $array)
 	{
 		$result = array();
 		foreach ($array as $key => $value) {
@@ -98,13 +98,13 @@ class DB
 		return $result;
 	}
 
-	public function secQuery($query, $params)
+	public function secQuery(string $query, array $params): array
 	{
 		/**
 		 * Generic secure query function
 		 * @param $query: sql query
 		 * @param $params: Desired array of parameters for binding
-		 * @return : array containing query status and statement handle for further manipulation
+		 * @return array containing query status and statement handle for further manipulation
 		 */
 		// echo $query.'<br>';
 		// var_dump($params);
@@ -119,25 +119,29 @@ class DB
 				throw new ForeignKeyViolated($e->getMessage());
 
 			else if (str_contains($e->getMessage(), "UNIQUE")) {
-				$conflict = explode('.', explode(',', explode("failed: ", $e->getMessage())[1])[0])[1];
-				$table = explode('.', explode(',', explode("failed: ", $e->getMessage())[1])[0])[0];
-				throw new UniquenessViolated($conflict, $table);
+				$conflicts = explode(',', explode("failed: ", $e->getMessage())[1]);
+				foreach($conflicts as &$conflict)
+					$conflict = explode('.', $conflict)[1];
+				$conflicts = implode(', ', $conflicts);
+
+				throw new UniquenessViolated($conflicts);
 			}
 
+			throw $e;
 			$result = False;
 		}
 
 		return array($result, $stmt);
 	}
 
-	public function select($fields, $table, $conditions = null, $comparison = '=')
+	public function select($fields, string $table, array $conditions = null, string $comparison = '='): array
 	{
 		/**
 		 * Secure and easy-to-use select query
-		 * @param $fields: fields to fetch from each matched record
-		 * @param $table: database table to select from
-		 * @param $conditions: Matching conditions key-value pairs
-		 * @return : Array of all matched records
+		 * @param array|string $fields: fields to fetch from each matched record
+		 * @param string $table: database table to select from
+		 * @param array $conditions: Matching conditions key-value pairs
+		 * @return array of all matched records
 		 */
 
 		if (is_array($fields))
@@ -155,7 +159,7 @@ class DB
 		return $this->secQuery($query, $bind_params)[1]->fetchAll(PDO::FETCH_ASSOC);
 	}
 
-	public function insert($table, $fields, $values = null)
+	public function insert(string $table, array $fields, array $values = null)
 	{
 		/**
 		 * Secure and easy-to-use insert query
@@ -185,7 +189,7 @@ class DB
 		else return false;
 	}
 
-	public function update($table, $new_values, $conditions)
+	public function update(string $table, array $new_values, array $conditions)
 	{
 		/**
 		 * Secure and easy-to-use update query
@@ -208,7 +212,7 @@ class DB
 		else return false;
 	}
 
-	public function delete($table, $conditions)
+	public function delete(string $table, array $conditions)
 	{
 		/**
 		 * Secure and easy-to-use delete query

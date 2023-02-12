@@ -15,7 +15,7 @@ class Curl {
     curl_setopt($ch, CURLOPT_TIMEOUT,10);
     curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($arr));
     $body = curl_exec($ch);
-    $code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    $code = curl_getMeta($ch, CURLINFO_HTTP_CODE);
     curl_close($ch);
     return self::format($code, $body) ;
   }
